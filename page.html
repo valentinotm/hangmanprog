@@ -10,13 +10,24 @@
 		var name = prompt("What is your name?");
 		console.log("Hello " + name);
 
-		var words = ["javascript","cats","dogs","animals","cuteness"];
+		var words = [
+			"javascript",
+			"cats",
+			"dogs",
+			"animals",
+			"cuteness",
+			"tigers",
+			"perrots",
+			"owls",
+			"rhinos"
+		];
+
 		var word = words[Math.floor(Math.random() * words.length)];
 
 		var answerArray = [];
 
 		for (var i = 0; i < word.length; i++) {
-		 answerArray[i] = "_";
+			answerArray[i] = "_";
 		};
 
 		var remainingLetters = word.length;
@@ -24,7 +35,7 @@
 		while (remainingLetters > 0) {
 			alert(answerArray.join(" "));
 
-			var guess = prompt("Guess a letter, or click Cancel to stop playing!");
+			var guess = prompt("Guess a letter, or click Cancel to stop playing!").toLowerCase();
 
 			if (guess === null) {
 				break;
@@ -39,6 +50,9 @@
 				};
 			};
 		};
+
+		alert(answerArray.join(" "));
+		alert("Good job! " + name + " The answer was '" + word + "'");
 
 	</script>
 	
