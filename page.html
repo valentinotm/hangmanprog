@@ -13,16 +13,16 @@
 		let arrayOfWords = ["javascript","cats","dogs","animals","cuteness"];
 		let randomWord = arrayOfWords[Math.floor(Math.random() * arrayOfWords.length)];
 
-		let answerArray = [];
+		let arrayOfAnsweredLetters = [];
 
-		for (var i = 0; i < randomWord.length; i++) {
-		 answerArray[i] = "_";
+		for (let index = 0; index < randomWord.length; index++) {
+		 arrayOfAnsweredLetters[index] = "_";
 		};
 
 		let remainingLetters = randomWord.length;
 
 		while (remainingLetters > 0) {
-			alert(answerArray.join(" "));
+			alert(arrayOfAnsweredLetters.join(" "));
 
 			let playerGuess = prompt("Guess a letter, or click Cancel to stop playing!");
 
